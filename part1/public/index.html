@@ -15,7 +15,7 @@
         <button class="button" @click="dogProgress=2">T      w     O</button>
         <button class="button" @click="dogProgress=3">T H   r  eEe    e</button>
         <button class="button" @click="dogProgress=4">Fff        o   U  r</button>
-        <button class="button" @click="dogProgress=5">f I  v   E</button>
+        <button class="button" @click="dogProgress=5" :disabled="dogProgress < 5">f I  v   E</button>
         <button class="button" @click="getDog()">dog</button>
     </div>
     <script>
