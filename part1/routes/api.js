@@ -8,7 +8,9 @@ function setDatabase(database) {
 
 router.get('/dogs', async (req, res) => {
     try {
-        const[rows] = await db.execute(`SELECT * FROM Dogs`);
+        const[rows] = await db.execute(`
+            SELECT `
+        );
         res.json(rows);
     } catch (err) {
         res.status(500).json({ error: 'Could not get Dogs' });
