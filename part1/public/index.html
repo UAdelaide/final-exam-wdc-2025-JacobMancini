@@ -48,12 +48,12 @@
         <h1>Dog</h1>
         <p>Click 6 buttons to see a dog</p>
 
-        <button class="button" type="button" @click="progressSequence(2)" :disabled="dogProgress !== 1"> .  </button>
-        <button class="button" type="button" @click="progressSequence(1)" :disabled="dogProgress !== 0"> .  </button>
-        <button class="button" type="button" @click="progressSequence(4)" :disabled="dogProgress !== 3"> .  </button>
-        <button class="button" type="button" @click="getDog()" :disabled="dogProgress !== 5">  . </button>
-        <button class="button" type="button" @click="progressSequence(5)" :disabled="dogProgress !== 4"> .  </button>
-        <button class="button" type="button" @click="progressSequence(3)" :disabled="dogProgress !== 2"> .  </button>
+        <button class="button" type="button" @click="progressSequence(2)" :disabled="dogProgress !== 1"> . </button>
+        <button class="button" type="button" @click="progressSequence(1)" :disabled="dogProgress !== 0"> . </button>
+        <button class="button" type="button" @click="progressSequence(4)" :disabled="dogProgress !== 3"> . </button>
+        <button class="button" type="button" @click="getDog()" :disabled="dogProgress !== 5"> . </button>
+        <button class="button" type="button" @click="progressSequence(5)" :disabled="dogProgress !== 4"> . </button>
+        <button class="button" type="button" @click="progressSequence(3)" :disabled="dogProgress !== 2"> . </button>
 
         <div v-if="dogImage" class="dogSection">
             <img class="dogImage" :src="dogImage" />
