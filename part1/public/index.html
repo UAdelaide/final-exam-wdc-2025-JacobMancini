@@ -19,7 +19,7 @@
         <button class="button" type="button" @click="getDog()" :disabled="dogProgress < 5">dog</button>
     </div>
     <div v-if="dogImage" class="dogSection">
-        <img class="dogImage"
+        <img class="dogImage" :src="dogImage" />
     </div>
     <script>
         const { createApp } = Vue;
