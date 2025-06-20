@@ -132,20 +132,6 @@ let db;
       `);
     }
 
-    const [walkRatingsCount] = await db.execute('SELECT COUNT(*) AS count FROM WalkRatings');
-    if (walkRatingsCount[0].count === 0) {
-        await db.execute(`
-            INSERT INTO WalkRatings (request_id, walker_id, owner_id, rating, comments)
-            VALUES (
-                (SELECT request_id FROM WalkRequests WHERE dog_id = (SELECT dog_id FROM Dogs WHERE name = 'Bella')),
-                (SELECT user_id FROM Users WHERE username = 'evewalker'),
-                (SELECT owner_id FROM Dogs WHERE name = 'Bella'),
-                5,
-                'Walked dog'
-            );
-        `);
-    }
-
     const [walkApplicationsCount] = await db.execute('SELECT COUNT(*) AS count FROM WalkApplications');
     if (walkApplicationsCount[0].count === 0) {
         await db.execute(`
@@ -164,6 +150,21 @@ let db;
                 (SELECT request_id FROM WalkRequests WHERE dog_id = (SELECT dog_id FROM Dogs WHERE name = 'Bobby')),
                 (SELECT user_id FROM Users WHERE username = 'alice123'),
                 'rejected'
+            );
+        `);
+    }
+
+    // Rating assumed as 
+    const [walkRatingsCount] = await db.execute('SELECT COUNT(*) AS count FROM WalkRatings');
+    if (walkRatingsCount[0].count === 0) {
+        await db.execute(`
+            INSERT INTO WalkRatings (request_id, walker_id, owner_id, rating, comments)
+            VALUES (
+                (SELECT request_id FROM WalkRequests WHERE dog_id = (SELECT dog_id FROM Dogs WHERE name = 'Bella')),
+                (SELECT user_id FROM Users WHERE username = 'evewalker'),
+                (SELECT owner_id FROM Dogs WHERE name = 'Bella'),
+                5,
+                'Walked dog'
             );
         `);
     }
