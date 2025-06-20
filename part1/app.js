@@ -151,8 +151,8 @@ let db;
         await db.execute(`
             INSERT INTO WalkApplications (request_id, walker_id, status)
             VALUES (
-            
-            )
+                
+            );
         `);
     }
 
