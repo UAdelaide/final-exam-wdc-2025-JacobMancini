@@ -42,6 +42,8 @@ let db;
       database: 'DogWalkService'
     });
 
+    // Creating Tables if they don't exist
+
     // Dogs
     await db.execute(`
       CREATE TABLE IF NOT EXISTS Dogs (
@@ -112,6 +114,7 @@ let db;
 
 
     // Insert data if table is empty
+    // Users
     const [userCount] = await db.execute('SELECT COUNT(*) AS count FROM Users');
     if (userCount[0].count === 0) {
       await db.execute(`
