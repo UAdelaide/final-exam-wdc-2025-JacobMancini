@@ -131,7 +131,10 @@ let db;
         VALUES ((SELECT dog_id FROM Dogs WHERE name = 'Davey'), '2025-06-23 11:00:00', 40, 'Greenhills Zone', 'cancelled');
       `);
     }
-  } catch (err) {
+    setDatabase(db);
+    app.use('/api', apiRouter);
+  }
+  catch (err) {
     console.error('Error setting up database. Ensure Mysql is running: service mysql start', err);
   }
 })();
