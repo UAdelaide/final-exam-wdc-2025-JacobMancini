@@ -107,7 +107,7 @@ let db;
         VALUES ((SELECT user_id FROM Users WHERE username = 'bobwalker'), 'Bobby', 'small');
 
         INSERT INTO Dogs (owner_id, name, size)
-            -> VALUES ((SELECT user_id FROM Users WHERE username = 'davedavidson'), 'Davey', 'large');
+        VALUES ((SELECT user_id FROM Users WHERE username = 'davedavidson'), 'Davey', 'large');
       `);
     }
 
