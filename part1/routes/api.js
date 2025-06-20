@@ -37,7 +37,12 @@ router.get('/walkrequests/open', async (req, res) => {
 router.get('/walkers/summary', async (req, res) => {
     try {
         const[rows] = await db.execute(`
-            SELECT u.username AS walker_username, COUNT(wr.rating_id) AS total_ratings, ROUND(AVG(wr.rating), 1) AS average_rating,
+            SELECT u.username AS walker_username,
+            COUNT(wr.rating_id) AS total_ratings,
+            ROUND(AVG(wr.rating), 1) AS average_rating,
+            (
+            
+            )
         `);
         res.json(rows);
     } catch (err) {
