@@ -18,12 +18,6 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 
 let db;
-var connection = mysql.createPool({
-    host: 'localhost',
-    user: 'root',
-    password: '',
-    database: 'DogWalkService'
-});
 
 (async () => {
   try {
@@ -39,11 +33,11 @@ var connection = mysql.createPool({
     await connection.end();
 
     // Now connect to the created database
-    db = await mysql.createConnection({
-      host: 'localhost',
-      user: 'root',
-      password: '',
-      database: 'testdb'
+    var connection = mysql.createPool({
+        host: 'localhost',
+        user: 'root',
+        password: '',
+        database: 'DogWalkService'
     });
 
     // Create a table if it doesn't exist
