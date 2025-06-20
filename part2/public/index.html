@@ -65,7 +65,9 @@
             })
 
             const result = await res.json();
-            if (!res.ok || !result.user)
+            if (!res.ok || !result.user) {
+              throw new Error(result.message )
+            }
 
             this.loggedIn = true;
             this.role = result.user.role;
