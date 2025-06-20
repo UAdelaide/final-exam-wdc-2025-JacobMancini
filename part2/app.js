@@ -5,6 +5,13 @@ require('dotenv').config();
 
 const app = express();
 
+// Express session implementation
+app.use(session({
+    secret: 'test',
+    resave: false,
+    saveUninitialized: false,
+}));
+
 // Middleware
 app.use(express.json());
 app.use(express.static(path.join(__dirname, '/public')));
@@ -15,14 +22,6 @@ const userRoutes = require('./routes/userRoutes');
 
 app.use('/api/walks', walkRoutes);
 app.use('/api/users', userRoutes);
-
-
-// Express session implementation
-app.use(session({
-    secret: 'test',
-    resave: false,
-    saveUninitialized: false,
-}));
 
 // Export the app instead of listening here
 module.exports = app;
