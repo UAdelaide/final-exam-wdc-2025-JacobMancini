@@ -19,8 +19,9 @@
                 }
             },
             methods: {
-                async getDog {
-                    
+                async getDog() {
+                    const res = await fetch('');
+                    const data = await res.json;
                 }
             }
         }).mount('#app');
