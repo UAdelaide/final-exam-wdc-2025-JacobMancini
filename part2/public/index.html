@@ -50,7 +50,7 @@
       },
       computed: {
         getDashboard() {
-          return this.role === 'owner' ? 
+          return this.role === 'owner' ? 'owner-dashboard.html' : 'walker-dashboard.html';
         }
       },
       methods: {
@@ -67,7 +67,7 @@
             this.role = result.user.role;
             this.username = result.user.username;
 
-
+            this.
 
           } catch {
 
