@@ -91,8 +91,8 @@ let db;
       `);
     }
 
-    const [dogCount] = await db.execute('SELECT COUNT(*) AS count FROM Users');
-    if (userCount[0].count === 0) {
+    const [dogCount] = await db.execute('SELECT COUNT(*) AS count FROM Dogs');
+    if (dogCount[0].count === 0) {
       await db.execute(`
         INSERT INTO Users (username, email, password_hash, role)
         VALUES
@@ -104,8 +104,8 @@ let db;
       `);
     }
 
-    const [userCount] = await db.execute('SELECT COUNT(*) AS count FROM Users');
-    if (userCount[0].count === 0) {
+    const [walkRequestsCount] = await db.execute('SELECT COUNT(*) AS count FROM Users');
+    if (walkRequestsCount[0].count === 0) {
       await db.execute(`
         INSERT INTO Users (username, email, password_hash, role)
         VALUES
