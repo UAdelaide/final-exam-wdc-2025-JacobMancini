@@ -149,7 +149,7 @@ let db;
     const [walkApplicationsCount] = await db.execute('SELECT COUNT(*) AS count FROM WalkApplications');
     if (walkApplicationsCount[0].count === 0) {
         await db.execute(`
-
+            
         `);
     }
 
