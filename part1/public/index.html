@@ -77,8 +77,8 @@
                     const data = await res.json();
                     this.dogImage = data.message;
                 },
-                progressSequence() {
-                    if (this.dogProgress ===)
+                progressSequence(currentProgress) {
+                    if (this.dogProgress === currentProgress - 1) this.dogProgress
                 }
             }
         }).mount('#app');
