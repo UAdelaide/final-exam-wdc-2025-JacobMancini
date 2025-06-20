@@ -1,5 +1,5 @@
 var express = require('express');
-var router = expressRouter();
+var router = express.Router();
 
 let db;
 function setDatabase(database) {
