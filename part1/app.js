@@ -135,6 +135,6 @@ let db;
   }
 })();
 
-
+app.use('/api', apiRouter)
 
 module.exports = app;
