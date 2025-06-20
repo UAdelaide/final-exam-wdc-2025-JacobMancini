@@ -40,6 +40,7 @@ router.post('/login', async (req, res) => {
   const { username, password } = req.body;
 
   try {
+    // Intended login via demonstration video is with username. Changed this from email
     const [rows] = await db.query(`
       SELECT user_id, username, role FROM Users
       WHERE username = ? AND password_hash = ?
