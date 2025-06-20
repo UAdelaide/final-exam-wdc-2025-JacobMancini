@@ -17,7 +17,8 @@ app.use('/api/walks', walkRoutes);
 app.use('/api/users', userRoutes);
 
 
-// Session 
+// Express session implementation
+app.use(session)
 
 // Export the app instead of listening here
 module.exports = app;
