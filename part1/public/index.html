@@ -15,8 +15,8 @@
         <button class="button" @click="dogProgress=2" :disabled="dogProgress < 1">T      w     O</button>
         <button class="button" @click="dogProgress=3" :disabled="dogProgress < 2">T H   r  eEe    e</button>
         <button class="button" @click="dogProgress=4" :disabled="dogProgress < 3">Fff        o   U  r</button>
-        <button class="button" @click="dogProgress=5" :disabled="dogProgress < 4">f I  v   E</button>
-        <button class="button" @click="getDog()" :disabled="dogProgress < 5">dog</button>
+        <button class="button" type="button" @click="dogProgress=5" :disabled="dogProgress < 4">f I  v   E</button>
+        <button class="button" type="button" @click="getDog()" :disabled="dogProgress < 5">dog</button>
     </div>
     <script>
         const { createApp } = Vue;
