@@ -17,14 +17,13 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 
-var pool = mysql.createPool({
+let db;
+var connection = mysql.createPool({
     host: 'localhost',
     user: 'root',
     password: '',
     database: 'DogWalkService'
 });
-
-let db;
 
 (async () => {
   try {
