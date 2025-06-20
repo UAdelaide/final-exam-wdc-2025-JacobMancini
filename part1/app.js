@@ -6,6 +6,7 @@ var mysql = require('mysql2/promise');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
+var { router: apiRouter, setDatabase } = require('./routes/api');
 
 var app = express();
 
@@ -17,7 +18,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
-var { router: apiRouter, setDatabase } = require('./routes/api');
 
 let db;
 
@@ -135,8 +135,5 @@ let db;
     console.error('Error setting up database. Ensure Mysql is running: service mysql start', err);
   }
 })();
-
-setDatabase(db);
-app.use('/api', apiRouter);
 
 module.exports = app;
