@@ -72,11 +72,12 @@
             this.loggedIn = true;
             this.role = result.user.role;
             this.username = result.user.username;
+            this.err = '';
 
             // Upon login, the getDashboard returns the dashboard to load dependent on the user role
             window.location.href = this.getDashboard;
 
-          } catch {
+          } catch(err) {
             // Error handling goes here
           }
         }
