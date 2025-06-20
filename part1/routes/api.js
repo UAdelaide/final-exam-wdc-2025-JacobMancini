@@ -26,7 +26,7 @@ router.get('/walkrequests/open', async (req, res) => {
 
 router.get('/walkers/summary', async (req, res) => {
     try {
-        const[rows] = await db.execute(`SELECT * FROM WalkerRatings`);
+        const[rows] = await db.execute(`SELECT * FROM WalkRatings`);
         res.json(rows);
     } catch (err) {
         res.status(500).json({ error: 'Could not get walker summaries' });
