@@ -9,11 +9,10 @@
 </head>
 <body class="bg-light">
   <div id="app" class="container py-4">
-    <div>
-      
+    <div class="">
+        <h1 class="text-success">Walker Dashboard</h1>
+      <button class="btn btn-outline-danger" type="button" @click="Logout">Logout</button>
     </div>
-    <h1 class="mb-4 text-success">Walker Dashboard</h1>
-    <button class="btn btn-outline-danger" type="button" @click="Logout">Logout</button>
 
     <!-- Alert messages -->
     <div v-if="message" class="alert alert-info">{{ message }}</div>
