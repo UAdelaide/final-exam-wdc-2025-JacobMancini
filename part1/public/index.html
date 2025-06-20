@@ -48,10 +48,11 @@
         <button class="button" type="button" @click="dogProgress=4" :disabled="dogProgress < 3">Four</button>
         <button class="button" type="button" @click="dogProgress=5" :disabled="dogProgress < 4">Five</button>
         <button class="button" type="button" @click="getDog()" :disabled="dogProgress < 5">Dog</button>
-    </div>
-    <div v-if="dogImage" class="dogSection">
+        <div v-if="dogImage" class="dogSection">
         <img class="dogImage" :src="dogImage" />
     </div>
+    </div>
+
     <script>
         const { createApp } = Vue;
 
