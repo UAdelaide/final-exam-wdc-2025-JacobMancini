@@ -13,12 +13,12 @@
     <h1 class="mb-4 text-primary">{{ message }}</h1>
 
     <div v-if="!loggedIn">
-      <form @submit.prevent="login">
-        <div>
+      <form @submit.prevent="login" class="">
+        <div class="">
           <label>Username: </label>
           <input v-model="username" type="text" required>
         </div>
-        <div>
+        <div class="">
           <label>Password: </label>
           <input v-model="password" type="password" required>
         </div>
