@@ -24,7 +24,8 @@ router.get('/walkrequests/open', async (req, res) => {
         const[rows] = await db.execute(`
             wr.request_id, d.name AS dog_name, wr.requested_time, wr.duration_minutes, wr.location, u.username AS owner_username
             FROM WalkRequests wr
-            JOIN Dogs ON 
+            JOIN Dogs d ON wr.dog_id = d.dog_id
+            JOIN Users u ON wr
         `);
         res.json(rows);
     } catch (err) {
