@@ -80,7 +80,7 @@ let db;
     await db.execute(`
       CREATE TABLE IF NOT EXISTS WalkApplications (
         application_id INT AUTO_INCREMENT PRIMARY KEY,
-        request_id INT AUTO_INCREMENT ,
+        request_id INT ,
         dog_id INT NOT NULL,
         requested_time DATETIME NOT NULL,
         duration_minutes INT NOT NULL,
