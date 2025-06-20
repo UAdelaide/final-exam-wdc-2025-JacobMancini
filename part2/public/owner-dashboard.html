@@ -9,9 +9,8 @@
 </head>
 <body class="bg-light">
   <div id="app" class="container py-4">
-
     <div class="d-flex justify-content-between align-items-center mb-4">
-      <h1 class="text-primary m-0">Walker Dashboard</h1>
+      <h1 class="text-primary m-0">Owner Dashboard</h1>
       <button class="btn btn-outline-danger" type="button" @click="Logout">Logout</button>
     </div>
 
@@ -128,7 +127,8 @@
           walks,
           message,
           error,
-          submitWalkRequest
+          submitWalkRequest,
+          Logout
         };
       }
     }).mount('#app');
