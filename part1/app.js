@@ -154,7 +154,7 @@ let db;
         `);
     }
 
-    // Rating assumed as walk for Bella was accepted and assumed completed in w
+    // Rating assumed as walk for Bella was accepted and assumed completed in WalkApplications above
     const [walkRatingsCount] = await db.execute('SELECT COUNT(*) AS count FROM WalkRatings');
     if (walkRatingsCount[0].count === 0) {
         await db.execute(`
