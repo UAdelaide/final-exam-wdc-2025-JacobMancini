@@ -132,7 +132,8 @@ let db;
       `);
     }
 
-    
+    const [walkRatingsCount] = await db.execute(``)
+
     setDatabase(db);
     app.use('/api', apiRouter);
   } catch (err) {
