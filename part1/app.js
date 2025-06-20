@@ -77,6 +77,7 @@ let db;
       )
     `);
 
+    // WalkApplications
     await db.execute(`
       CREATE TABLE IF NOT EXISTS WalkApplications (
         application_id INT AUTO_INCREMENT PRIMARY KEY,
@@ -90,6 +91,7 @@ let db;
       )
     `);
 
+    // WalkRatings
     await db.execute(`
       CREATE TABLE IF NOT EXISTS WalkRatings (
         rating_id INT AUTO_INCREMENT PRIMARY KEY,
