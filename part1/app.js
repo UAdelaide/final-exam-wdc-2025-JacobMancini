@@ -94,13 +94,20 @@ let db;
     const [dogCount] = await db.execute('SELECT COUNT(*) AS count FROM Dogs');
     if (dogCount[0].count === 0) {
       await db.execute(`
-        INSERT INTO Users (username, email, password_hash, role)
-        VALUES
-        ('alice123', 'alice@example.com', 'hashed123', 'owner'),
-        ('bobwalker', 'bob@example.com', 'hashed456', 'walker'),
-        ('carol123', 'carol@example.com', 'hashed789', 'owner'),
-        ('davedavidson', 'dave@example.com', 'hashbrown123', 'owner'),
-        ('evewalker', 'eve@example.com', 'hashbrown456', 'walker');
+        INSERT INTO Dogs (owner_id, name, size)
+            -> VALUES ((SELECT user_id FROM Users WHERE username = 'alice123'), 'Max', 'medium');
+
+        mysql> INSERT INTO Dogs (owner_id, name, size)
+            -> VALUES ((SELECT user_id FROM Users WHERE username = 'carol123'), 'Bella', 'small');
+
+        mysql> INSERT INTO Dogs (owner_id, name, size)
+            -> VALUES ((SELECT user_id FROM Users WHERE username = 'evewalker'), 'Charlie', 'large');
+
+        mysql> INSERT INTO Dogs (owner_id, name, size)
+            -> VALUES ((SELECT user_id FROM Users WHERE username = 'bobwalker'), 'Bobby', 'small');
+
+        mysql> INSERT INTO Dogs (owner_id, name, size)
+            -> VALUES ((SELECT user_id FROM Users WHERE username = 'davedavidson'), 'Davey', 'large');
       `);
     }
 
