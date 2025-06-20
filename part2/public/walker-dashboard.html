@@ -80,7 +80,8 @@
             await fetch('/api/users/logout', {
               method: 'POST',
               credentials: 'include'
-            })
+            });
+            window.location.href = '/';
           } catch (err) {
               console.error('Logout failed', err)
           }
