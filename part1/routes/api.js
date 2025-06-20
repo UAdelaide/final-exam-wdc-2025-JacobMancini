@@ -47,7 +47,7 @@ router.get('/walkers/summary', async (req, res) => {
                 WHERE wa.walker_id = u.user_id AND wrq.status = 'completed' AND wa.status = 'accepted'
             ) AS completed_walks
             FROM Users u
-            
+            LEFT JOIN WalkRatings wr ON u.user_id
         `);
         res.json(rows);
     } catch (err) {
