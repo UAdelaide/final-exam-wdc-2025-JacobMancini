@@ -156,9 +156,14 @@ let db;
                 'pending'
             ),
             (
-                (SELECT request_id FROM WalkRequests WHERE dog_id = (SELECT dog_id FROM Dogs WHERE name = 'Max')),
-                (SELECT user_id FROM Users WHERE username = 'bobwalker'),
-                'pending'
+                (SELECT request_id FROM WalkRequests WHERE dog_id = (SELECT dog_id FROM Dogs WHERE name = 'Bella')),
+                (SELECT user_id FROM Users WHERE username = 'evewalker'),
+                'accepted'
+            ),
+                        (
+                (SELECT request_id FROM WalkRequests WHERE dog_id = (SELECT dog_id FROM Dogs WHERE name = 'Bella')),
+                (SELECT user_id FROM Users WHERE username = 'evewalker'),
+                'accepted'
             ),
         `);
     }
