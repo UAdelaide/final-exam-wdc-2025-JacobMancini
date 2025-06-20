@@ -17,6 +17,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+var { router: apiRouter, setDatabase } = require('./routes/api');
 
 let db;
 
@@ -135,7 +136,6 @@ let db;
   }
 })();
 
-var { router: apiRouter, setDatabase } = require('./routes/api');
 setDatabase(db);
 app.use('/api', apiRouter);
 
