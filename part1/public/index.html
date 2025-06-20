@@ -53,7 +53,7 @@
         <button class="button" type="button" @click="dogProgress=4" :disabled="dogProgress < 3"> .  </button>
         <button class="button" type="button" @click="getDog()" :disabled="dogProgress < 5">  . </button>
         <button class="button" type="button" @click="dogProgress=5" :disabled="dogProgress < 4">  . </button>
-        <button class="button" type="button" @click="dogProgress=3" :disabled="dogProgress < 2">  . </button>
+        <button class="button" type="button" @click="dogProgress=3" :disabled="dogProgress !== 2">  . </button>
 
         <div v-if="dogImage" class="dogSection">
             <img class="dogImage" :src="dogImage" />
@@ -78,7 +78,7 @@
                     this.dogImage = data.message;
                 },
                 progressSequence(currentProgress) {
-                    if (this.dogProgress === currentProgress - 1) this.dogProgress
+                    if (this.dogProgress === currentProgress - 1) this.dogProgress = currentProgress;
                 }
             }
         }).mount('#app');
