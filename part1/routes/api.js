@@ -20,7 +20,7 @@ router.get('/walkrequests/open', async (req, res) => {
         const[rows] = await db.execute(`SELECT * FROM WalkRequests WHERE status = 'open'`);
         res.json(rows);
     } catch (err) {
-        res.status(500).json({ error: 'Could not get Dogs' });
+        res.status(500).json({ error: 'Could not get open walk requests' });
     }
 });
 
