@@ -8,7 +8,7 @@ router.get('/dogs', async (req, res) => {
     try {
         const[rows] = await
     }
-    catch {
-        
+    catch (err) {
+        res.status(500).json({})
     }
 });
