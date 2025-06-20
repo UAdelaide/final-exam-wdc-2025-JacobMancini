@@ -11,7 +11,28 @@
 
   <div id="app" class="d-flex justify-content-center align-items-center min-vh-100">
     <div class="container" style="max-width: 400px;">
+      <h1 class="mb-4 text-primary">{{ message }}</h1>
 
+      <div v-if="!loggedIn">
+        <form @submit.prevent="login" class="mb-4">
+          <div class="mb-3">
+            <label>Username:</label>
+            <input v-model="username" type="text" required class="form-control">
+          </div>
+          <div class="mb-3">
+            <label>Password:</label>
+            <input v-model="password" type="password" required class="form-control">
+          </div>
+          <button type="submit" class="btn btn-primary">Login</button>
+        </form>
+      </div>
+
+      <div v-else>
+        <p class="lead">Connect with trusted walkers for your beloved dog!</p>
+
+        <a href="owner-dashboard.html" class="btn btn-outline-primary me-2">Owner Dashboard</a>
+        <a href="walker-dashboard.html" class="btn btn-outline-success">Walker Dashboard</a>
+      </div>
     </div>
   </div>
 
