@@ -29,7 +29,7 @@ router.get('/walkers/summary', async (req, res) => {
         const[rows] = await db.execute(`SELECT * FROM Dogs`);
         res.json(rows);
     } catch (err) {
-        res.status(500).json({ error: 'Could not get Dogs' });
+        res.status(500).json({ error: 'Could not get walker summaries' });
     }
 });
 
