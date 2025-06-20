@@ -18,7 +18,11 @@ app.use('/api/users', userRoutes);
 
 
 // Express session implementation
-app.use(session)
+app.use(session({
+    secret: 'test',
+    resave: false,
+    
+}));
 
 // Export the app instead of listening here
 module.exports = app;
