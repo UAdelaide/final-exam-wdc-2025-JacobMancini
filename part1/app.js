@@ -139,8 +139,8 @@ let db;
         `);
     }
 
-    const [walkApplicationsCount] = await db.execute('SELECT COUNT(*) AS count FROM WalkRatings');
-    if (walkRatingsCount[0].count === 0) {
+    const [walkApplicationsCount] = await db.execute('SELECT COUNT(*) AS count FROM WalkApplications');
+    if (walkApplicationsCount[0].count === 0) {
         await db.execute(`
 
         `);
