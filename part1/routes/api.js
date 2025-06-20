@@ -43,6 +43,7 @@ router.get('/walkers/summary', async (req, res) => {
             (
                 SELECT COUNT(*)
                 FROM WalkRequests wrq
+                JOIN WalkApplications wa 
             )
         `);
         res.json(rows);
