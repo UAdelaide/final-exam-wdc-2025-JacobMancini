@@ -135,7 +135,8 @@ let db;
     const [walkRatingsCount] = await db.execute('SELECT COUNT(*) AS count FROM WalkRatings');
     if (walkRatingsCount[0].count === 0) {
         await db.execute(`
-        `)
+            
+        `);
     }
 
     setDatabase(db);
