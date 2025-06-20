@@ -131,6 +131,8 @@ let db;
         VALUES ((SELECT dog_id FROM Dogs WHERE name = 'Davey'), '2025-06-23 11:00:00', 40, 'Greenhills Zone', 'cancelled');
       `);
     }
+
+    
     setDatabase(db);
     app.use('/api', apiRouter);
   } catch (err) {
