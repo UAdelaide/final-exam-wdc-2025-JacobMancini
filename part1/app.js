@@ -132,7 +132,7 @@ let db;
       `);
     }
 
-    const [walkRatingsCount] = await db.execute(``)
+    const [walkRatingsCount] = await db.execute(`SELECT COUNT(*) AS count FROM WalkRatings`)
 
     setDatabase(db);
     app.use('/api', apiRouter);
