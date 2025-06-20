@@ -128,6 +128,7 @@ let db;
       `);
     }
 
+    // Dogs
     const [dogCount] = await db.execute('SELECT COUNT(*) AS count FROM Dogs');
     if (dogCount[0].count === 0) {
       await db.execute(`
@@ -148,6 +149,7 @@ let db;
       `);
     }
 
+    // WalkRequests
     const [walkRequestsCount] = await db.execute('SELECT COUNT(*) AS count FROM WalkRequests');
     if (walkRequestsCount[0].count === 0) {
       await db.execute(`
@@ -168,6 +170,7 @@ let db;
       `);
     }
 
+    //
     const [walkApplicationsCount] = await db.execute('SELECT COUNT(*) AS count FROM WalkApplications');
     if (walkApplicationsCount[0].count === 0) {
         await db.execute(`
