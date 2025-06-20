@@ -23,7 +23,7 @@
             <label>Password:</label>
             <input v-model="password" type="password" required class="form-control">
           </div>
-                <div v-if="err" class="alert alert-danger">{{ err }}</div>
+          <div v-if="err" class="alert alert-danger">{{ err }}</div>
           <button type="submit" class="btn btn-primary">Login</button>
         </form>
       </div>
@@ -73,7 +73,7 @@
 
           } catch(err) {
             // Error handling upon failed login
-            this.err = "Invalid Username or Passwor";
+            this.err = "Invalid Username or Password";
           }
         }
       }
