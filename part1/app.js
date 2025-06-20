@@ -135,6 +135,7 @@ let db;
   }
 })();
 
-app.use('/api', apiRouter)
+var { router: apiRouter, setDatabase }
+app.use('/api', apiRouter);
 
 module.exports = app;
