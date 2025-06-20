@@ -15,6 +15,24 @@ router.get('/dogs', async (req, res) => {
     }
 });
 
+router.get('/walkrequests/open', async (req, res) => {
+    try {
+        const[rows] = await db.execute('SELECT * FROM Dogs');
+        res.json(rows);
+    } catch (err) {
+        res.status(500).json({ error: 'Could not get Dogs' });
+    }
+});
+
+router.get('/walkers/summary', async (req, res) => {
+    try {
+        const[rows] = await db.execute('SELECT * FROM Dogs');
+        res.json(rows);
+    } catch (err) {
+        res.status(500).json({ error: 'Could not get Dogs' });
+    }
+});
+
 
 
 module.exports = { router, setDatabase };
