@@ -77,7 +77,9 @@
 
         async function Logout() {
           try {
-            await fetch('/api/users/logout')
+            await fetch('/api/users/logout', {
+              method: Post
+            })
           } catch (err) {
               console.error('Logout failed', err)
           }
