@@ -45,8 +45,9 @@ router.get('/walkers/summary', async (req, res) => {
                 FROM WalkRequests wrq
                 JOIN WalkApplications wa ON wa.request_id = wrq.request_id
                 WHERE wa.walker_id = u.user_id AND wrq.status = 'completed' AND wa.status = 'accepted'
-            )
-            FROm 
+            ) 
+            FROM Users u
+
         `);
         res.json(rows);
     } catch (err) {
