@@ -136,6 +136,7 @@ let db;
 })();
 
 var { router: apiRouter, setDatabase } = require('./routes/api');
+setDatabase(db);
 app.use('/api', apiRouter);
 
 module.exports = app;
