@@ -48,12 +48,12 @@
         <h1>Dog</h1>
         <p>Click 6 buttons to see a dog</p>
 
-        <button class="button" type="button" @click="dogProgress=2" :disabled="dogProgress < 1">Two</button>
-        <button class="button" type="button" @click="dogProgress=1">One</button>
-        <button class="button" type="button" @click="dogProgress=4" :disabled="dogProgress < 3">Four</button>
-        <button class="button" type="button" @click="getDog()" :disabled="dogProgress < 5">Dog</button>
-        <button class="button" type="button" @click="dogProgress=5" :disabled="dogProgress < 4">Five</button>
-        <button class="button" type="button" @click="dogProgress=3" :disabled="dogProgress < 2">Three</button>
+        <button class="button" type="button" @click="dogProgress=2" :disabled="dogProgress < 1">   </button>
+        <button class="button" type="button" @click="dogProgress=1">   </button>
+        <button class="button" type="button" @click="dogProgress=4" :disabled="dogProgress < 3">   </button>
+        <button class="button" type="button" @click="getDog()" :disabled="dogProgress < 5">   </button>
+        <button class="button" type="button" @click="dogProgress=5" :disabled="dogProgress < 4">   </button>
+        <button class="button" type="button" @click="dogProgress=3" :disabled="dogProgress < 2">   </button>
 
 
         <div v-if="dogImage" class="dogSection">
