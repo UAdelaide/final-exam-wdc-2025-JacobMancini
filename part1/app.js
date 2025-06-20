@@ -162,9 +162,9 @@ let db;
             ),
                         (
                 (SELECT request_id FROM WalkRequests WHERE dog_id = (SELECT dog_id FROM Dogs WHERE name = 'Bobby')),
-                (SELECT user_id FROM Users WHERE username = 'alicewalker'),
-                'accepted'
-            ),
+                (SELECT user_id FROM Users WHERE username = 'alice123'),
+                'rejected'
+            );
         `);
     }
 
