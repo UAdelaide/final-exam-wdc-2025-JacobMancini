@@ -115,19 +115,19 @@ let db;
     if (walkRequestsCount[0].count === 0) {
       await db.execute(`
         INSERT INTO WalkRequests (dog_id, requested_time, duration_minutes, location, status)
-VALUES ((SELECT dog_id FROM Dogs WHERE name = 'Max'), '2025-06-20 08:00:00', 30, 'Parklands', 'open');
+        VALUES ((SELECT dog_id FROM Dogs WHERE name = 'Max'), '2025-06-20 08:00:00', 30, 'Parklands', 'open');
 
-INSERT INTO WalkRequests (dog_id, requested_time, duration_minutes, location, status)
-VALUES ((SELECT dog_id FROM Dogs WHERE name = 'Bella'), '2025-06-21 09:30:00', 45, 'Beachside Ave', 'accepted');
+        INSERT INTO WalkRequests (dog_id, requested_time, duration_minutes, location, status)
+        VALUES ((SELECT dog_id FROM Dogs WHERE name = 'Bella'), '2025-06-21 09:30:00', 45, 'Beachside Ave', 'accepted');
 
-mysql> INSERT INTO WalkRequests (dog_id, requested_time, duration_minutes, location, status)
-    -> VALUES ((SELECT dog_id FROM Dogs WHERE name = 'Charlie'), '2025-06-22 07:45:00', 60, 'Hazelwood Park', 'open');
+        INSERT INTO WalkRequests (dog_id, requested_time, duration_minutes, location, status)
+        VALUES ((SELECT dog_id FROM Dogs WHERE name = 'Charlie'), '2025-06-22 07:45:00', 60, 'Hazelwood Park', 'open');
 
-mysql> INSERT INTO WalkRequests (dog_id, requested_time, duration_minutes, location, status)
-    -> VALUES ((SELECT dog_id FROM Dogs WHERE name = 'Bobby'), '2025-06-22 10:15:00', 30, 'Glenunga Reserve', 'open');
+        INSERT INTO WalkRequests (dog_id, requested_time, duration_minutes, location, status)
+        VALUES ((SELECT dog_id FROM Dogs WHERE name = 'Bobby'), '2025-06-22 10:15:00', 30, 'Glenunga Reserve', 'open');
 
-mysql> INSERT INTO WalkRequests (dog_id, requested_time, duration_minutes, location, status)
-    -> VALUES ((SELECT dog_id FROM Dogs WHERE name = 'Davey'), '2025-06-23 11:00:00', 40, 'Greenhills Zone', 'cancelled');
+        INSERT INTO WalkRequests (dog_id, requested_time, duration_minutes, location, status)
+        VALUES ((SELECT dog_id FROM Dogs WHERE name = 'Davey'), '2025-06-23 11:00:00', 40, 'Greenhills Zone', 'cancelled');
       `);
     }
   } catch (err) {
