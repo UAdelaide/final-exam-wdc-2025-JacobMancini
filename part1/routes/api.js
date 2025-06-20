@@ -22,7 +22,7 @@ router.get('/dogs', async (req, res) => {
 router.get('/walkrequests/open', async (req, res) => {
     try {
         const[rows] = await db.execute(`
-            wr.request_id, d
+            wr.request_id, d.name AS dog_name, wr.requested_time, wr.duration_minutes, 
         `);
         res.json(rows);
     } catch (err) {
