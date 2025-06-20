@@ -17,7 +17,7 @@ router.get('/dogs', async (req, res) => {
 
 router.get('/walkrequests/open', async (req, res) => {
     try {
-        const[rows] = await db.execute('SELECT * FROM WalkRequests WHERE status = open');
+        const[rows] = await db.execute('SELECT * FROM WalkRequests WHERE status = 'open'`);
         res.json(rows);
     } catch (err) {
         res.status(500).json({ error: 'Could not get Dogs' });
