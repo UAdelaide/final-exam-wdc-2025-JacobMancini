@@ -135,7 +135,7 @@ let db;
   }
 })();
 
-var { router: apiRouter, setDatabase }
+var { router: apiRouter, setDatabase } = require('./routes/api');
 app.use('/api', apiRouter);
 
 module.exports = app;
