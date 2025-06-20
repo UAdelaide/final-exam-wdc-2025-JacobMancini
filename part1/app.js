@@ -33,11 +33,11 @@ let db;
     await connection.end();
 
     // Now connect to the created database
-    var connection = mysql.createPool({
-        host: 'localhost',
-        user: 'root',
-        password: '',
-        database: 'DogWalkService'
+    db = await mysql.createConnection({
+      host: 'localhost',
+      user: 'root',
+      password: '',
+      database: 'DogWalkService'
     });
 
     // Create a table if it doesn't exist
