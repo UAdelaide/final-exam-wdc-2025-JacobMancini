@@ -139,7 +139,9 @@ let db;
             VALUES (
                 (SELECT request_id FROM WalkRequests WHERE dog_id = (SELECT dog_id FROM Dogs WHERE name = 'Bella')),
                 (SELECT user_id FROM Users WHERE username = 'evewalker'),
-                (SELECT owner_id FROM Dogs WHERE name = 'Bella')
+                (SELECT owner_id FROM Dogs WHERE name = 'Bella'),
+                5,
+                'Walked dog'
             );
         `);
     }
