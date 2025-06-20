@@ -61,6 +61,7 @@
             const result = await res.json();
             if (!res.ok || !result.user) {
               throw new Error(result.message || "Invalid Credentials");
+              this.$emit('login-success', { message: data.message, user: data.user });
             }
 
             this.loggedIn = true;
