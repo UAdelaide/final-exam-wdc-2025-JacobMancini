@@ -15,3 +15,7 @@ router.get('/dogs', async (req, res) => {
         res.status(500).json({ error: 'Could not get Dogs' });
     }
 });
+
+
+
+module.exports = { router}
