@@ -95,18 +95,18 @@ let db;
     if (dogCount[0].count === 0) {
       await db.execute(`
         INSERT INTO Dogs (owner_id, name, size)
-            -> VALUES ((SELECT user_id FROM Users WHERE username = 'alice123'), 'Max', 'medium');
+        VALUES ((SELECT user_id FROM Users WHERE username = 'alice123'), 'Max', 'medium');
 
-        mysql> INSERT INTO Dogs (owner_id, name, size)
-            -> VALUES ((SELECT user_id FROM Users WHERE username = 'carol123'), 'Bella', 'small');
+        INSERT INTO Dogs (owner_id, name, size)
+        VALUES ((SELECT user_id FROM Users WHERE username = 'carol123'), 'Bella', 'small');
 
-        mysql> INSERT INTO Dogs (owner_id, name, size)
-            -> VALUES ((SELECT user_id FROM Users WHERE username = 'evewalker'), 'Charlie', 'large');
+        INSERT INTO Dogs (owner_id, name, size)
+        VALUES ((SELECT user_id FROM Users WHERE username = 'evewalker'), 'Charlie', 'large');
 
-        mysql> INSERT INTO Dogs (owner_id, name, size)
-            -> VALUES ((SELECT user_id FROM Users WHERE username = 'bobwalker'), 'Bobby', 'small');
+        INSERT INTO Dogs (owner_id, name, size)
+        VALUES ((SELECT user_id FROM Users WHERE username = 'bobwalker'), 'Bobby', 'small');
 
-        mysql> INSERT INTO Dogs (owner_id, name, size)
+        INSERT INTO Dogs (owner_id, name, size)
             -> VALUES ((SELECT user_id FROM Users WHERE username = 'davedavidson'), 'Davey', 'large');
       `);
     }
