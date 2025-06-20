@@ -57,8 +57,11 @@
               body: JSON.stringify({ username: this.username, password: this.password })
             })
 
+            const result = await res.json();
             this.loggedIn = true;
+            this.role = result.user.role;
             
+
 
 
           } catch {
