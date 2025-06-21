@@ -69,6 +69,9 @@ router.post('/logout', (req, res) => {
   });
 });
 
-// Dogs 
+// Dog acquisition for select menu
+router.get('/api/dogs/name') {
+  
+}
 
 module.exports = router;
