@@ -76,7 +76,7 @@ router.get('/dogs/name', async (req, res) => {
   res.json(dogs);
 });
 
-router.get('/', async (req, res) => {
+router.get('/dogs', async (req, res) => {
   try {
     const [rows] = await db.query('SELECT * FROM Dogs');
     res.json(rows);
