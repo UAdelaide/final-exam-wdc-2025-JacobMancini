@@ -108,7 +108,9 @@
             if (!res.ok) throw new Error('Could not get dog images');
             const dogList = await res.json();
 
-            const updateDogs
+            const updatedDogs = await Promise.all(
+              
+            )
 
           } catch (err) {
 
