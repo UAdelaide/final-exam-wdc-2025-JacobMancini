@@ -73,7 +73,7 @@ router.post('/logout', (req, res) => {
 router.get('/api/dogs/name', async (req, res) => {
   const owner_id = req.session.user.user_id;
   const [dogs] = await db.query {
-    `SELECT * dog_id, name `
+    `SELECT * dog_id, name FROM Dogs WHERE owner_id = ?`, [owner_id];
   }
 });
 module.exports = router;
