@@ -70,14 +70,14 @@ router.post('/logout', (req, res) => {
 });
 
 // Dog acquisition for select menu
-router.get('/dogs/name', async (req, res) => {
+router.get('/name', async (req, res) => {
   const owner_id = req.session.user.user_id;
   const [dogs] = await db.query(`SELECT dog_id, name FROM Dogs WHERE owner_id = ?`, [owner_id]);
   res.json(dogs);
 });
 
 // Dog acquisition for table images
-router.get('/dogs', async (req, res) => {
+router.get('/', async (req, res) => {
   try {
     const [rows] = await db.query('SELECT * FROM Dogs');
     res.json(rows);
