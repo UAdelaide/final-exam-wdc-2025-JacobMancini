@@ -71,8 +71,6 @@ router.post('/logout', (req, res) => {
 
 // Dog acquisition for select menu
 router.get('/api/dogs/name', async (req, res) => {
-  try {
-    if(!req.)
-  }
+  
 });
 module.exports = router;
