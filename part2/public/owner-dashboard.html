@@ -85,6 +85,7 @@
         const walks = ref([]);
         const message = ref('');
         const error = ref('');
+        
 
         async function loadWalks() {
           try {
@@ -133,6 +134,7 @@
           }
         }
 
+        // Function to load dogs for select menu
         async function loadDogs() {
           try {
             const res = await fetch('/api/dogs/name');
