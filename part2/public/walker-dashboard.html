@@ -96,7 +96,8 @@
             const data = res.await.json();
             return data.user_id;
           } catch (err) {
-
+              error.value = error.message;
+              return null;
           }
         }
 
