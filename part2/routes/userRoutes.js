@@ -76,7 +76,7 @@ router.get('/dogs/name', async (req, res) => {
   res.json(dogs);
 });
 
-// Dog 
+// Dog acquisition for table images
 router.get('/dogs', async (req, res) => {
   try {
     const [rows] = await db.query('SELECT * FROM Dogs');
