@@ -31,7 +31,7 @@
       <div>
         <h2 class="">All Registered Dogs</h2>
         <table class="">
-          <thead class="">
+          <thead class="table-primary">
             <tr>
               <th>Dog ID</th>
               <th>Name</th>
@@ -46,7 +46,7 @@
               <td>{{ dog.name }}</td>
               <td>{{ dog.size }}</td>
               <td>{{ dog.owner_id }}</td>
-              <td><img :src="dog.image" class="" alt="Dog Image" style="width: 100px, height: auto;"/></td>
+              <td><img :src="dog.image" class="" alt="Dog Image" style="width: 100px; height: auto;"/></td>
             </tr>
           </tbody>
         </table>
