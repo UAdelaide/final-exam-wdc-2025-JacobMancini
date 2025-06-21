@@ -137,7 +137,7 @@
         // Function to load dogs for select menu
         async function loadDogs() {
           try {
-            const res = await fetch('/api/dogs/name');
+            const res = await fetch('/api/users/dogs/name');
             if (!res.ok) throw new Error('Could not fetch dogs');
             dogs.value = await res.json();
           } catch(err) {
