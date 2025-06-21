@@ -109,7 +109,9 @@
             const dogList = await res.json();
 
             const updatedDogs = await Promise.all(
-              
+              dogList.map(async (dog) => {
+                
+              })
             )
 
           } catch (err) {
