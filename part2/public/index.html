@@ -115,13 +115,13 @@
                   const imageData = await imageRes.json();
                   return { ...dog, image: imageData.message };
                 } catch {
-                  return {}
+                  // Placeholder image would go here
                 }
               })
             )
             this.dogs = updatedDogs;
           } catch (err) {
-              console.error('Could not load dog images: ', err.message);
+              console.error(err.message);
           }
         }
       },
