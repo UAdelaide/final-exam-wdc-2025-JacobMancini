@@ -101,6 +101,9 @@
             this.err = "Invalid Username or Password";
           }
         }
+      },
+      mounted() {
+        this.loadDogs();
       }
     }).mount('#app');
   </script>
