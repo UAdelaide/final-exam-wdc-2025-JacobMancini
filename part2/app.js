@@ -10,7 +10,11 @@ app.use(session({
     secret: 'test',
     resave: false,
     saveUninitialized: false,
-    
+    cookie: {
+        httpOnly: true,
+        secure: false,
+        
+    }
 }));
 
 // Middleware
