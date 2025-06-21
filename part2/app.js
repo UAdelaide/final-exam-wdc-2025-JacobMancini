@@ -9,7 +9,8 @@ const app = express();
 app.use(session({
     secret: 'test',
     resave: false,
-    saveUninitialized: false
+    saveUninitialized: false,
+    
 }));
 
 // Middleware
