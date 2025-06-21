@@ -108,7 +108,7 @@
         // Function to load random images of dogs into the registered dogs table from the api used in Part 1
         async loadDogs() {
           try {
-            const res = await fetch('/api/dogs/dogs');
+            const res = await fetch('/api/dogs/');
             if (!res.ok) throw new Error('Could not get dog images');
             const dogList = await res.json();
 
